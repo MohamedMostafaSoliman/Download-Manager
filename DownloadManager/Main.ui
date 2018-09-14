@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>777</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DownLoad Manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 0, 127);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>761</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Download Youtube Video</string>
+     </attribute>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(255, 85, 0);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Video URL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(255, 85, 0);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Save Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LE_insertvideourl">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>40</y>
+        <width>431</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LE_savelocation_2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>90</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Browse_2">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>90</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color: rgb(0, 170, 127);
+	font: 10pt &quot;Century Gothic&quot;; 
+	
+	
+	
+	background-color: rgb(255, 255, 255);
+	
+	
+	color: rgb(0, 85, 0);
+}
+
+QPushButton::hover
+{background-color: rgb(255, 85, 127);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Browser</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	
+	
+	color: rgb(0, 255, 0);
+font: 12pt &quot;Century Gothic&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Video information</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_download_video">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>420</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{ border-color: rgb(0, 170, 127); font: 12pt &quot;Century Gothic&quot;; border-radius: 50px; color: rgb(85, 255, 255); background-color: rgb(0, 85, 127); 
+border-radius:10px}
+
+QPushButton::hover
+{
+  
+	background-color: rgb(255, 85, 127);
+}</string>
+      </property>
+      <property name="text">
+       <string>Start Download </string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmb_videoinfo">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>150</y>
+        <width>511</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Century Gothic&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_videoinfo">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>40</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color: rgb(0, 170, 127);
+	font: 10pt &quot;Century Gothic&quot;; 
+	
+	
+	
+	background-color: rgb(255, 255, 255);
+	
+	
+	color: rgb(0, 85, 0);
+}
+
+QPushButton::hover
+{background-color: rgb(255, 85, 127);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Find Video info</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>300</y>
+        <width>701</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border:2px solid;
+	border-color: rgb(85, 85, 255);
+	border-color: rgb(170, 0, 0);
+background-color: rgb(0, 0, 0);
+text-align:center;
+	color: rgb(221, 0, 166);
+}
+QProgressBar::chunk
+{
+ 
+background-color: rgb(255, 255, 0);
+width:5px;
+margin:0.5px;
+}</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>250</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(255, 0, 127);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}
+</string>
+      </property>
+      <property name="text">
+       <string>Video Download Percentage</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	
+	
+	color: rgb(0, 255, 0);
+font: 12pt &quot;Century Gothic&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>audio information</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmb_videoinfo_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>200</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Century Gothic&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>340</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(255, 0, 127);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}
+</string>
+      </property>
+      <property name="text">
+       <string>audio Download Percentage</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>380</y>
+        <width>701</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border:2px solid;
+	border-color: rgb(85, 85, 255);
+	border-color: rgb(170, 0, 0);
+background-color: rgb(0, 0, 0);
+text-align:center;
+	color: rgb(221, 0, 166);
+}
+QProgressBar::chunk
+{
+ 
+background-color: rgb(255, 255, 0);
+width:5px;
+margin:0.5px;
+}</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page3">
+     <attribute name="title">
+      <string>Download Youtube playlist</string>
+     </attribute>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color: rgb(0, 255, 0);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Play List URL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color: rgb(0, 255, 0);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Save Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LE_inserturl_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>40</y>
+        <width>551</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Browse_3">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>90</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color: rgb(0, 170, 127);
+	font: 10pt &quot;Century Gothic&quot;; 
+	
+	
+	
+	background-color: rgb(255, 255, 255);
+	
+	
+	color: rgb(0, 85, 0);
+}
+
+QPushButton::hover
+{background-color: rgb(255, 85, 127);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Browser</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LE_savelocation_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Download_5">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>290</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{ border-color: rgb(0, 170, 127); font: 12pt &quot;Century Gothic&quot;; border-radius: 50px; color: rgb(85, 255, 255); background-color: rgb(0, 85, 127); 
+border-radius:10px}
+
+QPushButton::hover
+{
+  
+	background-color: rgb(255, 85, 127);
+}</string>
+      </property>
+      <property name="text">
+       <string>Start Download </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Download Files</string>
+     </attribute>
+     <widget class="QLineEdit" name="LE_savelocation">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{color: rgb(0, 138, 202);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}
+</string>
+      </property>
+      <property name="text">
+       <string>Download Percentage</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Browse">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>110</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border-color: rgb(0, 170, 127);
+	font: 10pt &quot;Century Gothic&quot;; 
+	background-color: rgb(170, 255, 255);
+	color: rgb(0, 85, 0);
+	color: rgb(113, 0, 85);
+}
+
+QPushButton::hover
+{background-color: rgb(255, 85, 127);
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Browser</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{color: rgb(0, 138, 202);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>insert URL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{color: rgb(0, 138, 202);
+font: 13pt &quot;MS Shell Dlg 2&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>Save Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LE_inserturl">
+      <property name="geometry">
+       <rect>
+        <x>152</x>
+        <y>60</y>
+        <width>551</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+font: 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>270</y>
+        <width>701</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border:2px solid;
+	border-color: rgb(85, 85, 255);
+	border-color: rgb(170, 0, 0);
+background-color: rgb(0, 0, 0);
+text-align:center;
+	color: rgb(221, 0, 166);
+}
+QProgressBar::chunk
+{
+ 
+background-color: rgb(255, 255, 0);
+width:5px;
+margin:0.5px;
+}</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Download">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>330</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{ border-color: rgb(0, 170, 127); font: 12pt &quot;Century Gothic&quot;; border-radius: 50px; color: rgb(85, 255, 255); background-color: rgb(0, 85, 127); 
+border-radius:10px}
+
+QPushButton::hover
+{
+  
+	background-color: rgb(255, 85, 127);
+}</string>
+      </property>
+      <property name="text">
+       <string>Start Download </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Help</string>
+     </attribute>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>721</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#00ff00;&quot;&gt;To Download Youtube Video plaese follow instructions: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;1- insert correct Youtube video URL&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2-Click on Find Video info and wait untill the list with different qualities and sizes to be&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; available and Choose from the video info that you want &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;3- Browse to find place to save your video&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;4-Click on Start Download&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>721</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#00ff00;&quot;&gt;To Download Youtube playlis plaese follow instructions: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;1- insert correct Youtube video URL&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;3- Browse to find place to save your video&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;4-Click on Start Download&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>777</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
